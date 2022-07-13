@@ -22,12 +22,14 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "npm"
-                  cache-dependency-path: "**/package-lock.json"
-            - run: cd /home/ubuntu/actions-runner/_work/chat-app/chat-app/server
-            - run: pwd
-            - run: npm ci
-            - run: cd /home/ubuntu/actions-runner/_work/chat-app/chat-app/client
-            - run: npm install
-            - run: pwd
-            - run: npm run build
-            - run: pm2 restart chatapp
+				  
+            - name: Server
+              working-directory: /server
+			  run: npm ci
+			  
+            - name: Client
+			  working-directorty: /client
+              run: npm install
+              run: pwd
+              run: npm run build
+              run: pm2 restart chatapp
