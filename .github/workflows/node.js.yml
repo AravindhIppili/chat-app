@@ -25,7 +25,7 @@ jobs:
             - name: Server
               working-directory: /server
 	      run: npm ci
-	    - name: Client
+            - name: Client
               working-directorty: /client
               run: npm install
               run: pwd
