@@ -27,9 +27,6 @@ jobs:
                   cache: "npm"
                   cache-dependency-path: "**/package-lock.json"
             - run: npm ci
-            - run: pwd
-            - run: cd .. && cd client
-            - run: npm install
-            - run: npm run build --if-present
-            - run: npm run build
-            - run: pm2 restart chatapp
+            - name: Client
+              working-directory: "client"
+              run: npm install && pwd && npm run build && pm2 restart chatapp
