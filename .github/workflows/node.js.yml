@@ -27,9 +27,7 @@ jobs:
                   cache: "npm"
                   cache-dependency-path: "**/package-lock.json"
             - run: npm ci
-            - run: cd ..
-            - run: pwd
-            - run: cd ./client
+            - run: cd /home/ubuntu/actions-runner/_work/chat-app/chat-app/client
             - run: npm install
             - run: pwd
             - run: npm run build
