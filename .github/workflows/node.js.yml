@@ -30,5 +30,5 @@ jobs:
             - run: cd .. && cd client
             - run: npm install
             - run: npm run build --if-present
-            - run: npm run build:production
+            - run: npm run build
             - run: pm2 restart chatapp
