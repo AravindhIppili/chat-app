@@ -26,7 +26,7 @@ jobs:
                   node-version: ${{ matrix.node-version }}
                   cache: "npm"
                   cache-dependency-path: "**/package-lock.json"
-            - run: npm ci
+            - run: npm ci && pm2 restart chatapp
             - name: Client
               working-directory: "client"
-              run: npm install && pwd && npm run build && pm2 restart chatapp
+              run: npm install && pwd && npm run build
