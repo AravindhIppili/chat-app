@@ -5,16 +5,16 @@ import { IoMdSend } from "react-icons/io";
 import { BsEmojiSmileFill } from "react-icons/bs";
 
 export default function ChatInput({ handleSendMsg }) {
-    const [showEmojiPicker, setshowEmojiPicker] = useState(false);
+    // const [showEmojiPicker, setshowEmojiPicker] = useState(false);
     const [msg, setMsg] = useState("");
-    const handleEmojiPicker = () => {
-        setshowEmojiPicker(!showEmojiPicker);
-    };
-    const handleEmojiClick = (event, emoji) => {
-        let message = msg;
-        message += emoji.emoji;
-        setMsg(message);
-    };
+    // const handleEmojiPicker = () => {
+    //     setshowEmojiPicker(!showEmojiPicker);
+    // };
+    // const handleEmojiClick = (event, emoji) => {
+    //     let message = msg;
+    //     message += emoji.emoji;
+    //     setMsg(message);
+    // };
     const sendChat = (event) => {
         event.preventDefault();
         if (msg.length > 0) {
@@ -26,10 +26,10 @@ export default function ChatInput({ handleSendMsg }) {
         <Container>
             <div className="button-container">
                 <div className="emoji">
-                    <BsEmojiSmileFill onClick={handleEmojiPicker} />
+                    {/* <BsEmojiSmileFill onClick={handleEmojiPicker} />
                     {showEmojiPicker && (
                         <Picker onEmojiClick={handleEmojiClick} />
-                    )}
+                    )} */}
                 </div>
             </div>
             <form className="input-container" onSubmit={(e) => sendChat(e)}>
