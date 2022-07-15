@@ -29,4 +29,7 @@ jobs:
             - run: npm ci && pm2 restart chatapp
             - name: Client
               working-directory: "client"
-              run: npm install && npm run build
+              run: npm install               
+            - name: Client build
+              working-directory: "client"
+              run: npm run build
