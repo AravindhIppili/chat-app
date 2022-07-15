@@ -6,6 +6,7 @@ import Chat from "./pages/Chat";
 import SetAvatar from "./pages/SetAvatar";
 
 function App() {
+    process.env.CI = false;
     return (
         <BrowserRouter>
             <Routes>
