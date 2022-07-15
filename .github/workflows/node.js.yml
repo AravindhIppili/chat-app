@@ -32,4 +32,4 @@ jobs:
               run: npm install
             - name: Client build
               working-directory: "client"
-              run: CI = false npm run build
+              run: unset CI && npm run build
