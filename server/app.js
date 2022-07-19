@@ -27,7 +27,7 @@ app.use(
 app.use(morgan("dev"));
 app.use(express.json());
 app.get("/", (req, res) => {
-    res.send("Hell!");
+    res.send("Hello!");
 });
 app.get("/test", (req, res) => {
     res.send("Hi");
